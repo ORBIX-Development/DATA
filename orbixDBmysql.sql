@@ -18,8 +18,8 @@ CREATE TABLE user_in(
     senha VARCHAR(15) NOT NULL,
     id_cliente INT,
     id_medico INT,
-    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
-    FOREIGN KEY (id_medico) REFERENCES medico(id_medico)
+    FOREIGN KEY (id_cliente) REFERENCES costumer(id_cliente),
+    FOREIGN KEY (id_medico) REFERENCES doctor(id_medico)
 );
 CREATE TABLE scheduling(
     id_agendamento INT PRIMARY KEY AUTO_INCREMENT,
@@ -38,8 +38,8 @@ CREATE TABLE consult(
     status_consulta VARCHAR(15) NOT NULL,
     id_cliente INT,
     id_medico INT,
-    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
-    FOREIGN KEY (id_medico) REFERENCES medico(id_medico)
+    FOREIGN KEY (id_cliente) REFERENCES costumer(id_cliente),
+    FOREIGN KEY (id_medico) REFERENCES doctor(id_medico)
 );
 
  
